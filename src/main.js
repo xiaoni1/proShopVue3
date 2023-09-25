@@ -1,14 +1,19 @@
 /*
- * @Descripttion: 
- * @version: 
+ * @Descripttion: main
+ * @version: 1.0
  * @Author: G
  * @Date: 2023-09-19 17:43:18
  * @LastEditors: G
- * @LastEditTime: 2023-09-19 19:04:28
+ * @LastEditTime: 2023-09-25 15:57:42
  */
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+// 1、重置样式库
+import 'normalize.css'
+// 2、自己项目的重置样式和公用样式
+import '@/assets/styles/common.less'
 
 createApp(App).use(store).use(router).mount('#app')
