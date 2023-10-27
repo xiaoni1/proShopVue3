@@ -12,15 +12,27 @@ export default {
   mutations: {
     setList (state, payload) {
       state.list = payload
+    },
+    // 定义show和hide函数，控制当前分类得耳二级分类显示和隐藏
+    show (state, item) {
+      const category = state.list.find(category => category.id === item.id)
+      category.open = true
+    },
+    hide (state, item) {
+      const category = state.list.find(category => category.id === item.id)
+      category.open = false
     }
   },
   // 获取分类函数
   actions: {
     async getList ({ commit }) {
       // 获取分类数据
-      const data = await findAllCategory()
+      const { result } = await findAllCategory()
+      result.forEach(top => {
+        top.open = false
+      })
       // 修改分类数据
-      commit('setList', data.result)
+      commit('setList', result)
     }
   }
 }

@@ -8,7 +8,7 @@
 -->
 <template>
   <div class="top-category">
-
+    top-category
   </div>
 </template>
 

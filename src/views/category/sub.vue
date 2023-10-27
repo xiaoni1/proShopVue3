@@ -4,20 +4,20 @@
  * @Author: G
  * @Date: 2023-10-13 19:26:12
  * @LastEditors: G
- * @LastEditTime: 2023-10-13 19:27:24
+ * @LastEditTime: 2023-10-16 18:08:58
 -->
 <template>
-  <div class="top-category_sub">
-
+  <div class="sub-category">
+    sub-category
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TopCategorySub'
+  name: 'SubCategorySub'
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

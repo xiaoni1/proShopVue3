@@ -4,12 +4,14 @@
  * @Author: G
  * @Date: 2023-09-19 17:43:18
  * @LastEditors: G
- * @LastEditTime: 2023-09-22 19:00:44
+ * @LastEditTime: 2023-10-17 15:25:15
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const Layout = () => import('@/views/Layout')
 const Home = () => import('@/views/home')
+const TopCategory = () => import('@/views/category/index')
+const SubCategory = () => import('@/views/category/sub')
 
 // 路由规则
 const routes = [
@@ -17,7 +19,9 @@ const routes = [
     path: '/',
     component: Layout,
     children: [
-      { path: '/', component: Home }
+      { path: '/', component: Home },
+      { path: '/category/:id', component: TopCategory },
+      { path: '/category/sub/:id', component: SubCategory }
     ]
   }
 ]
